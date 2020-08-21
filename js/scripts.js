@@ -112,3 +112,41 @@ while( myWhileIterator > 0 ) // Repeats the code block so long as the condition
   console.log( `While iterator: ${myWhileIterator}` );
   myWhileIterator--; // myWhileIterator = myWhileIterator - 1;
 }
+
+console.log( "FOR...OF LOOP PRACTICE:\n==================" );
+const myForArray = ["Wal-Mart", "Best Buy", "SuperStore", "Safeway"];
+for ( const arrayItem of myForArray ) // for...of will iterate on its own through the array.
+{ // We don't need to set a terminiation condition. We also get a great way for
+  // accessing the value from each iteration, based on the name we specify before
+  // the "of" keyword.
+  console.log( `This array item in our loop contains: ${arrayItem}` );
+}
+
+// let myNum = 5;
+// ALL THREE BELOW ARE EQUIVALENT:
+// myNum = myNum + 1;
+// myNum++; // Always is +1.
+// myNum += 1;
+
+console.log( "FOR LOOP PRACTICE:\n==================" );
+for ( let myForIterator = -5; myForIterator < 30; myForIterator += 10 )
+{ // for loops have 3 parts:
+  // ASSIGNMENT; CONDITION; ITERATION
+  console.log( `This iteration of our for loop's value is: ${myForIterator}` );
+}
+
+/**
+ * Functions in JavaScript.
+ */
+
+function myAdditionFunction ( num1 = 0, num2 = 0 ) {
+  return Number( num1 ) + Number( num2 );
+}
+
+// Testing out our function!
+const add2And4 = myAdditionFunction( 2, 4 );
+console.log( add2And4 );
+
+console.log( myAdditionFunction( -15, 35 ) );
+
+console.log( myAdditionFunction( 3.14, 67 ) );
