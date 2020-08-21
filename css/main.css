@@ -1,0 +1,5 @@
+/* Basic Browser Default Reset */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* Changes our box model a bit... padding / border will now be included in width, instead of in addition to. */
+}
