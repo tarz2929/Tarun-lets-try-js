@@ -52,3 +52,6 @@ const myArray = [ // Arrays can store multiple pieces of data (including other a
 /**
  * Writing to the console.
  */
+
+console.log( "Hello to the browser console!" );
+console.log( myArray );
