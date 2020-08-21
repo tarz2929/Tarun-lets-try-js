@@ -100,3 +100,15 @@ Our array: myArray is ${myArray.length} items long.
 Its fourth index includes the value: ${myArray[4]}
 All template literals are wrapped in: "\${}"
 ` );
+
+/**
+ * Loops in JavaScript.
+ */
+
+console.log( "WHILE LOOP PRACTICE:\n==================" );
+let myWhileIterator = 5;
+while( myWhileIterator > 0 ) // Repeats the code block so long as the condition
+{         // evaluates to (Boolean)true.
+  console.log( `While iterator: ${myWhileIterator}` );
+  myWhileIterator--; // myWhileIterator = myWhileIterator - 1;
+}
