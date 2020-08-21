@@ -190,5 +190,26 @@ const myMultiplicationFunction = ( num1 = 0, num2 = 0 ) => { // See: 6.ii
 console.log( "Multiplication (3, 9): " + myMultiplicationFunction( 3, 9 ) ); // 27
 
 /**
- * 
+ * JavaScript object.
  */
+
+const myPersonInfoArray = [
+  "Henry",
+  38,
+  ["Skydiving", "Programming", "Mountain Climbing"]
+];
+
+console.log( "Person as an array:" );
+console.log( myPersonInfoArray );
+console.log( `Name is: ${myPersonInfoArray[0]}` );
+
+// An object, in contrast to 
+const myObject = {
+  name: "Henry",
+  age: 38,
+  hobbies: ["Skydiving", "Programming", "Mountain Climbing"]
+};
+
+console.log( "Person as an object:" );
+console.log( myObject );
+console.log( `Name is: ${myObject.name}. Age is: ${myObject.age}` );
