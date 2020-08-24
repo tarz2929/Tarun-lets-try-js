@@ -30,11 +30,16 @@ helloForm.addEventListener( 'submit', ( event ) => {
 
   // How do I make a new LI element?
   const newLI = document.createElement( 'LI' ); // We want a <li> !
+  const newCheckBox = document.createElement( 'INPUT' );
+  newCheckBox.type = "checkbox";
+  
   console.log( newLI ); // Notice, it is not in the page YET!
   // ***When we create an element, it is not automatically added. We have to tell it where and when to enter the webpage.
 
   // How do I insert a value/text into the LI element?
   newLI.textContent = `Hello, ${name}!`; // Add content to the LI!
+  newLI.prepend( newCheckBox );
+  newCheckBox.addEventListener( 'click', () => {} );
   console.log( newLI.textContent ); // Test that it was successfully assigned.
   console.log( newLI ); // Or you can view the whole object / element again if preferred.
 
@@ -43,3 +48,19 @@ helloForm.addEventListener( 'submit', ( event ) => {
   // *** Once an element is appended, it is not stuck there. You can move it again...
   // *** and again in this same way.
 } );
+
+
+// eventListener passes an argument to our function... an event object!
+// helloForm.addEventListener( 'submit', ( event ) => {
+//   // Stop the form from submitting! 
+//   event.preventDefault(); // We don't want a new pageload!
+//   console.log( event ); // The full event object.
+//   console.log( event.target ); // Gets the element that the event occurred on.
+
+//   // How do we get our "value" from our form field?
+//   const name = nameField.value;
+//   console.log( name );
+
+//   // How do I make a new LI element?
+//   helloList.innerHTML += `<li>Hello, ${name}! (innerHTML Version!)</li>`;
+// } );
