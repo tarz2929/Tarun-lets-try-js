@@ -25,6 +25,8 @@ helloForm.addEventListener( 'submit', ( event ) => {
   console.log( event.target ); // Gets the element that the event occurred on.
 
   // How do we get our "value" from our form field?
+  const name = nameField.value;
+  console.log( name );
 
   // How do I make a new LI element?
 
