@@ -59,10 +59,14 @@ console.log( 'Change the H2 font colour to "salmon."' );
 console.log( firstSpan.classList ); // List of classes applied to our element.
 hoverButton.addEventListener( 'mouseenter', () => {
   console.log( 'The mouse has entered the button!' );
+  // Add our class to the list for this element...
   firstSpan.classList.add( 'salmon-coloured-text' );
-  console.log( firstSpan.classList );
+  console.log( firstSpan.classList ); // Let's see if it worked!
 } );
 
 hoverButton.addEventListener( 'mouseleave', () => {
   console.log( 'The mouse has left the button!' );
+  // Remove our class from the list for this element...
+  firstSpan.classList.remove( 'salmon-coloured-text' );
+  console.log( firstSpan.classList ); // Let's see if it worked!
 } );
