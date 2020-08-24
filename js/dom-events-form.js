@@ -39,4 +39,7 @@ helloForm.addEventListener( 'submit', ( event ) => {
   console.log( newLI ); // Or you can view the whole object / element again if preferred.
 
   // How do I add the LI element to the page (or, our list?)
+  helloList.appendChild( newLI ); // Append (add) the new LI INTO the UL (hello-list.)
+  // *** Once an element is appended, it is not stuck there. You can move it again...
+  // *** and again in this same way.
 } );
