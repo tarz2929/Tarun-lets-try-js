@@ -70,3 +70,8 @@ hoverButton.addEventListener( 'mouseleave', () => {
   firstSpan.classList.remove( 'salmon-coloured-text' );
   console.log( firstSpan.classList ); // Let's see if it worked!
 } );
+
+// Let's listen for a click on this button element...
+clickButton.addEventListener( 'click', () => {
+  console.log( 'The "click" button was clicked.' );
+} );
