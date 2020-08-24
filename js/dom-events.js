@@ -56,8 +56,11 @@ console.log( 'Change the H2 font colour to "salmon."' );
  *   2) The instructions (what should run when the event occurs.)
  *      (This means: a function!)
  */
+console.log( firstSpan.classList ); // List of classes applied to our element.
 hoverButton.addEventListener( 'mouseenter', () => {
   console.log( 'The mouse has entered the button!' );
+  firstSpan.classList.add( 'salmon-coloured-text' );
+  console.log( firstSpan.classList );
 } );
 
 hoverButton.addEventListener( 'mouseleave', () => {
