@@ -59,3 +59,7 @@ console.log( 'Change the H2 font colour to "salmon."' );
 hoverButton.addEventListener( 'mouseenter', () => {
   console.log( 'The mouse has entered the button!' );
 } );
+
+hoverButton.addEventListener( 'mouseleave', () => {
+  console.log( 'The mouse has left the button!' );
+} );
