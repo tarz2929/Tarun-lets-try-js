@@ -60,3 +60,14 @@ const jane = new Person(
 // Let's see our brand new "Person" object!
 console.log( jane );
 console.log( jane instanceof Person ); // true if the object is from Person
+
+const dimitri = new Person(
+  "Dimitri",
+  41,
+  ["Painting", "Driving"]
+);
+
+console.log( dimitri );
+
+// Accessing properties is the same as always!
+console.log( `My name is ${dimitri.name}. I am ${dimitri.age} years old.` );
