@@ -73,6 +73,28 @@ class Person
     bDayP.textContent = `${this.name} is now ${this.age} years old!`;
     document.body.appendChild( bDayP );
   }
+
+  // Let's output a list of their hobbies...
+  outputHobbies ()
+  {
+    // Paragraph (who's hobbies are these?)
+    const hobbiesP = document.createElement( 'P' );
+    hobbiesP.textContent = `${this.name}'s hobbies include:`;
+    document.body.appendChild( hobbiesP );
+    // List of hobbies.
+    const hobbiesUL = document.createElement( 'UL' );
+    // Loop through our hobbies... (for...of loop for Arrays!)
+    for ( const hobby of this.hobbies )
+    {
+      // Create an LI.
+      const hobbyLI = document.createElement( 'LI' );
+      // Add the hobby text (array item value) to the LI.
+      hobbyLI.textContent = hobby;
+      // Add THIS <li> to the UL we made.
+      hobbiesUL.appendChild( hobbyLI );
+    } // Don't forget to add our populated <ul> to the <body>!
+    document.body.appendChild( hobbiesUL );
+  }
 }
 
 // Now we can make an object that FOLLOWS the blueprint.
@@ -107,3 +129,6 @@ console.log( `My name is ${dimitri.name}. I am ${dimitri.age} years old.` );
 
 // Have the Dimitri Person say hello now.
 dimitri.sayHello();
+
+// What are Dimitri's hobbies?
+dimitri.outputHobbies();
