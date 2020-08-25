@@ -57,6 +57,22 @@ class Person
     helloP.textContent = `Hello there! I am ${this.name}, nice to meet you!`;
     document.body.appendChild( helloP );
   }
+
+  // This method will make the age go up by one.
+  birthday ()
+  {
+    // Age + 1!
+    this.age++; // this.age = this.age + 1;
+                // this.age += 1;
+    // Add a birthday heading...
+    const bDayH2 = document.createElement( 'H2' );
+    bDayH2.textContent = "Birthday Detected!";
+    document.body.appendChild( bDayH2 );
+    // Add a paragraph letting us know WHO is celebrating...
+    const bDayP = document.createElement( 'P' );
+    bDayP.textContent = `${this.name} is now ${this.age} years old!`;
+    document.body.appendChild( bDayP );
+  }
 }
 
 // Now we can make an object that FOLLOWS the blueprint.
@@ -72,6 +88,11 @@ console.log( jane instanceof Person ); // true if the object is from Person
 
 // Run the sayHello() method for Jane.
 jane.sayHello();
+
+console.log( jane.age ); // What is the age BEFORE the bday?
+// Happy birthday Jane!
+jane.birthday();
+console.log( jane.age ); // Did the bday CHANGE?
 
 const dimitri = new Person(
   "Dimitri",
