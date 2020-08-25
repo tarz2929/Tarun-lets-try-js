@@ -95,6 +95,15 @@ class Person
     } // Don't forget to add our populated <ul> to the <body>!
     document.body.appendChild( hobbiesUL );
   }
+
+  // Let's try to add a hobby to the hobbies property (array.)
+  addHobby ( hobby = "" )
+  { // Make sure the string is not empty!
+    if ( hobby.length > 0 )
+    { // Add the hobby to the end of the array.
+      this.hobbies.push( hobby );
+    }
+  }
 }
 
 // Now we can make an object that FOLLOWS the blueprint.
@@ -115,6 +124,10 @@ console.log( jane.age ); // What is the age BEFORE the bday?
 // Happy birthday Jane!
 jane.birthday();
 console.log( jane.age ); // Did the bday CHANGE?
+
+jane.addHobby( "Cinematography" );
+jane.addHobby( "Chess" );
+jane.outputHobbies();
 
 const dimitri = new Person(
   "Dimitri",
