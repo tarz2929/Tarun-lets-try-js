@@ -7,3 +7,8 @@
 .salmon-coloured-text {
   color: salmon;
 }
+
+.hobby-list-item {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}

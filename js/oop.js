@@ -90,6 +90,8 @@ class Person
       const hobbyLI = document.createElement( 'LI' );
       // Add the hobby text (array item value) to the LI.
       hobbyLI.textContent = hobby;
+      // hobbyLI.style.fontWeight = "bold"; // DON'T DO THIS! INLINE IS HARD TO MAINTAIN!!!
+      hobbyLI.classList.add( "hobby-list-item" ); // Do this instead :) Keep CSS where it belongs!
       // Add THIS <li> to the UL we made.
       hobbiesUL.appendChild( hobbyLI );
     } // Don't forget to add our populated <ul> to the <body>!
