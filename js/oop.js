@@ -12,6 +12,11 @@ console.log( `My name is ${myObj.name}. I am ${myObj.age} years old!` );
 
 console.log( myObj );
 
+// We can convert an existing object into a JSON string.
+// Make sure the object doesn't have methods or incompatible data/features for the JSON format.
+const myObjString = JSON.stringify( myObj );
+console.log( myObjString );
+
 // JSON (JavaScript Object Notation)
 // Properties MUST be wrapped in double quotes to be considered valid JSON.
 // We CANNOT have methods in a JSON string/object.
