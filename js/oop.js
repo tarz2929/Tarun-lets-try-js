@@ -45,8 +45,17 @@ class Person
   constructor ( name = "", age = 0, hobbies = [] )
   {
     this.name = name;
-    this.age = age;
+    this.age = Number( age );
     this.hobbies = hobbies;
+  }
+
+  // We can create our own methods!
+  // These work like functions, but are INSIDE objects.
+  sayHello ()
+  {
+    const helloP = document.createElement( "P" );
+    helloP.textContent = `Hello there! I am ${this.name}, nice to meet you!`;
+    document.body.appendChild( helloP );
   }
 }
 
@@ -61,6 +70,9 @@ const jane = new Person(
 console.log( jane );
 console.log( jane instanceof Person ); // true if the object is from Person
 
+// Run the sayHello() method for Jane.
+jane.sayHello();
+
 const dimitri = new Person(
   "Dimitri",
   41,
@@ -71,3 +83,6 @@ console.log( dimitri );
 
 // Accessing properties is the same as always!
 console.log( `My name is ${dimitri.name}. I am ${dimitri.age} years old.` );
+
+// Have the Dimitri Person say hello now.
+dimitri.sayHello();
