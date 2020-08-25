@@ -31,3 +31,32 @@ console.log( secondPersonString );
 const secondPersonObj = JSON.parse( secondPersonString );
 // If the string was properly formatted JSON, it should now be usable!
 console.log( secondPersonObj );
+
+/**
+ * Classes (Blueprints for a "Type" of Object!)
+ * Typically PascalCased.
+ */
+
+class Person
+{
+  // "constructor" is a reserved method name.
+  // The constructor method runs when a new object is being
+  // created following this blueprint / class.
+  constructor ( name = "", age = 0, hobbies = [] )
+  {
+    this.name = name;
+    this.age = age;
+    this.hobbies = hobbies;
+  }
+}
+
+// Now we can make an object that FOLLOWS the blueprint.
+const jane = new Person(
+  "Jane",
+  34,
+  ["Sewing", "Cross-Country Skiing"]
+);
+
+// Let's see our brand new "Person" object!
+console.log( jane );
+console.log( jane instanceof Person ); // true if the object is from Person
