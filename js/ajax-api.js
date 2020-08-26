@@ -47,5 +47,16 @@ fetch( 'http://api.open-notify.org/astros.json' )
  * Let's see about grabbing live data based on a timer!
  */
 
+// Grab the elements that we want to update content for.
+const latDD  = document.getElementById( 'lat' );
+const longDD = document.getElementById( 'long' );
+console.log( latDD );
+console.log( longDD ); // Test to make sure we grabbed the right stuff!
 
- 
+// Add a function that grabs data from our API and updates the elements.
+const updateLatLong = () => {
+  // First thing's first, grab the data.
+  // fetch ( 'http://api.open-notify.org/iss-now.json' )
+}
+
+// Add a repeating "timer" so that this function can repeat.
