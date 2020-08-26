@@ -56,7 +56,21 @@ console.log( longDD ); // Test to make sure we grabbed the right stuff!
 // Add a function that grabs data from our API and updates the elements.
 const updateLatLong = () => {
   // First thing's first, grab the data.
-  // fetch ( 'http://api.open-notify.org/iss-now.json' )
+  fetch ( 'http://api.open-notify.org/iss-now.json' )
+    // Return a JS object, converted from the JSON response string.
+    .then( response => { return response.json(); } )
+    // Let's work with our data...
+    .then( data => { // Check if the data came through, make note of its architecture.
+      console.log( data );
+      // Grab our latitude and longitude from the data object.
+      const lat = data.iss_position.latitude;
+      const long = data.iss_position.longitude;
+      // Update the elements in the DOM.
+      latDD.textContent = lat;
+      longDD.textContent = long;
+    } )
+    // Output if there is an error in our fetch chain.
+    .catch( error => { console.log( error ); } );
 }
 
 // Add a repeating "timer" so that this function can repeat.
