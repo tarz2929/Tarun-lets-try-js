@@ -42,3 +42,10 @@ fetch( 'http://api.open-notify.org/astros.json' )
   .catch( error => { // It is a good idea to output it when debugging.
     console.log( error );
   } );
+
+/**
+ * Let's see about grabbing live data based on a timer!
+ */
+
+
+ 
