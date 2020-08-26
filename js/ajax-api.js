@@ -12,5 +12,12 @@
  * use of the built-in "fetch()" function/feature.
  */
 
+// First argument in "fetch" should be the URL (or resource.)
+// If this is URL is an API, we refer to this as an "endpoint."
+fetch( 'http://api.open-notify.org/astros.json' )
+  // Our function returns a JS object (converted from our 
+  // JSON string that the API provides.) 
+  .then( response => response.json() )
+  // Let's check to see if our object is here!
+  .then( data => { console.log( data ); } );
 
- 
